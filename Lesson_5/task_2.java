@@ -9,7 +9,6 @@ public class task_2 {
                         "Анна Владимирова", "Иван Мечников", "Петр Петин", "Иван Ежов"));
 
         Map<String, Integer> words = new HashMap<>();
-
         for (int i = 0; i < names.size(); i++) {
             List<String> temp = List.of(names.get(i).split(" "));
             if (!words.containsKey(temp.get(0))) {
@@ -19,7 +18,6 @@ public class task_2 {
             }
         }
         words.values().removeAll(Collections.singleton(1));
-
         int size = words.size();
         List<ArrayList<Object>> lst = new ArrayList<>(size);
         for (int i = 0; i < size; i++) {
@@ -42,10 +40,7 @@ public class task_2 {
                 }
             }
         }
-
-        for (
-
-                int i = 0; i < lst.size(); i++) {
+        for (int i = 0; i < lst.size(); i++) {
             System.out.println(lst.get(i).get(0) + ": " + lst.get(i).get(1));
         }
     }
